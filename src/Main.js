@@ -37,25 +37,45 @@ class Main extends Component {
         </main>
 
         <footer>
-          <div className="footerLeft">
-            <img src="/image/Marvel Studios WB.svg" width="140"/>
-            <p>An unofficial website to <br/> watch and download any <br/> Marvel's movies for free.</p>
-          </div>
-          <div className="footerRight">
-            <div className="footerSocialInfo">
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/facebook.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/github.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/whatsapp.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/telegram.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/instagram.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/mail.svg" width="22" /></a>
-              <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/spotify.svg" width="22" /></a>
-            </div>
-            <p align="right">
-              <span className="fontBold">Built with ❤ using <a href="https://reactjs.org" className="textHoverRed">React</a></span><br />
-              <span title="Copyright 2022">&copy; 2022</span> • <a href="https://habibi2004.tech" className="textHoverRed">Ahmad Habibi</a>
+
+          <img src="/image/Marvel Studios WB.svg" width="230"/>
+
+          <div className="footerContainer">
+
+            <p className="footerLeft">
+              <span className="fontBold">MCU Moofree - MCU Moofree Watch and Download Marvel Movies</span>, here you can watch and download any Marvel's movies in high quality for free without annoying of advertising, just come and enjoy your movies online.
             </p>
+
+            <div className="footerRight">
+              <div className="footerSocialInfo">
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/facebook.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/github.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/whatsapp.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/telegram.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/instagram.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/mail.svg" width="22" /></a>
+                <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/spotify.svg" width="22" /></a>
+              </div>
+              <div>
+                <p>Built with <a href="https://reactjs.org/" className="lightHoverRed">create react app</a></p>
+                <img src="/icons/reactjs.svg" width="15" />
+              </div>
+              <div>
+                <p>Hosted on <a href="https://github.com" className="lightHoverRed">github</a></p>
+                <img src="/icons/github.svg" width="15" />
+              </div>
+              <div>
+                <p>Deploy on <a href="https://www.netlify.com" className="lightHoverRed">netlify</a></p>
+                <img src="/icons/netlify.svg" width="18" />
+              </div>
+              <p>Copyright &copy; 2022 • <a href="https://habibi2004.tech/" className="grayHoverRed">Ahmad Habibi</a></p>
+            </div>
+
           </div>
+          {/*<p>
+            <span className="fontBold">Built with ❤ using <a href="https://reactjs.org" className="textHoverRed">React</a></span><br />
+            <span title="Copyright 2022">&copy; 2022</span> • <a href="https://habibi2004.tech" className="textHoverRed">Ahmad Habibi</a>
+          </p>*/}
 
         </footer>
       </HashRouter>
