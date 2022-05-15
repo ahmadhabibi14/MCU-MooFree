@@ -20,7 +20,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-  background: var(--light);
+  background: var(--dark);
 }
 
 html::-webkit-scrollbar-thumb{
@@ -38,6 +38,10 @@ body {
 	margin: 0 0 !important;
 	font-family: Roboto, sans-serif;
 	font-size: 15px;
+}
+
+.textWhite{
+	color: var(--light) !important;
 }
 
 .fontBold {
@@ -175,10 +179,23 @@ body {
 
 	footer {
 		padding: 20px 15px !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-items: center !important;
+		align-content: center !important;
+	}
+
+	footer > img {
+		width: 170px !important;
 	}
 
 	.footerContainer {
-		flex-direction: column;
+		flex-direction: column !important;
+		justify-content: center !important;
+		align-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
 	}
 
 	.footerLeft {
@@ -202,6 +219,15 @@ body {
 	.footerRight > p {
 		justify-content: flex-start !important;
 		text-align: left !important;
+	}
+
+	.footerRight > p {
+		margin: 0 0 !important;
+		text-align: center !important;
+	}
+
+	.footerRight > hr {
+		display: block !important;
 	}
 }
 /* AKhir Responsive */
@@ -318,8 +344,13 @@ body {
 /* Footer */
 footer {
 	background-color: var(--dark);
-	color: var(--light);
+	color: var(--hover-light);
 	padding: 30px 45px;
+	font-weight: 400;
+}
+
+footer > img {
+	width: 320px;
 }
 
 footer > .footerContainer {
@@ -360,5 +391,19 @@ footer > .footerContainer > .footerRight > div {
 .footerRight > div > img,
 .footerSocialInfo > a {
 	margin-left: 5px;
+}
+
+.footerRight > hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+  z-index: 0;
+  display: none;
+}
+
+.footerRight > hr:not([size]) {
+  height: 1px;
 }
 /* Akhir Footer */

@@ -38,12 +38,12 @@ class Main extends Component {
 
         <footer>
 
-          <img src="/image/Marvel Studios WB.svg" width="230"/>
+          <img src="/image/Marvel Studios WB.svg"/>
 
           <div className="footerContainer">
 
             <p className="footerLeft">
-              <span className="fontBold">MCU Moofree - MCU Moofree Watch and Download Marvel Movies</span>, here you can watch and download any Marvel's movies in high quality for free without annoying of advertising, just come and enjoy your movies online.
+              <span className="textWhite">MCU Moofree - Watch and Download Marvel Movies</span>, here you can watch and download any Marvel's movies in high quality for free without annoying of advertising, just come and enjoy your movies online.
             </p>
 
             <div className="footerRight">
@@ -68,7 +68,8 @@ class Main extends Component {
                 <p>Deploy on <a href="https://www.netlify.com" className="lightHoverRed">netlify</a></p>
                 <img src="/icons/netlify.svg" width="18" />
               </div>
-              <p>Copyright &copy; 2022 • <a href="https://habibi2004.tech/" className="grayHoverRed">Ahmad Habibi</a></p>
+              <hr />
+              <p>Copyright &copy; 2022 • <a href="https://habibi2004.tech/" className="lightHoverRed">Ahmad Habibi</a></p>
             </div>
 
           </div>
