@@ -38,6 +38,7 @@ body {
 	margin: 0 0 !important;
 	font-family: Roboto, sans-serif;
 	font-size: 15px;
+	min-height: 100vh;
 }
 
 .textWhite{
@@ -347,6 +348,7 @@ footer {
 	color: var(--hover-light);
 	padding: 30px 45px;
 	font-weight: 400;
+	margin-top: auto;
 }
 
 footer > img {
