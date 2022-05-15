@@ -57,7 +57,7 @@ class Main extends Component {
                 <a href="https://habibi2004.tech" className="textHoverRed"><img src="/icons/spotify.svg" width="22" /></a>
               </div>
               <div>
-                <p>Built with <a href="https://reactjs.org/" className="lightHoverRed">create react app</a></p>
+                <p>Built with <a href="https://reactjs.org/" className="lightHoverRed">react</a></p>
                 <img src="/icons/reactjs.svg" width="15" />
               </div>
               <div>
