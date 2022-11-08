@@ -1,439 +1,70 @@
 :root {
-  --dark: #1A1A1A;
-  --light: #F7F7F7;
-  --red: #E50B14;
-  --hover-red: #EC3A41;
-  --hover-light: #C8B7B7;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-* {
-	text-decoration: none;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
 }
-
-@font-face {
-	font-family: Anton;
-	src: local("/webfont/Anton-Regular.ttf") format("truetype");
-}
-
-html::-webkit-scrollbar{
-  width: 0.5rem;
-}
-
-html::-webkit-scrollbar-track{
-  background: var(--dark);
-}
-
-html::-webkit-scrollbar-thumb{
-  background: var(--red);
-}
-
-*::selection {
-  background: var(--red);
-  color: var(--light);
+a:hover {
+  color: #535bf2;
 }
 
 body {
-	background-color: var(--light);
-	color: var(--dark);
-	margin: 0 0 !important;
-	/*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
-	font-family: "Cantarell", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-}
-
-main {
-	min-height: 70vh;
-}
-
-.fillRed:hover {
-	fill: var(--red);
-}
-
-.textWhite{
-	color: var(--light) !important;
-}
-
-.fontBold {
-	font-weight: bold;
-}
-
-.textHoverLight:hover {
-	color: var(--hover-light);
-}
-
-.lightHoverRed {
-	color: var(--light);
-}
-.lightHoverRed:hover {
-	color: var(--red);
-}
-
-.grayHoverRed {
-	color: var(--hover-light);
-}
-.grayHoverRed:hover {
-	color: var(--red);
-}
-
-.hoverRed:hover{
-	background-color: var(--hover-red) !important;
-}
-
-.home,
-.movies,
-.about,
-.news {
-	padding: 20px 30px !important;
-}
-
-/* Nav BAR */
-.navLinkActive {
-	border-bottom: 5px solid var(--red);
-}
-
-.navBar {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	height: 70px;
-	padding: 0 30px;
-	background-color: var(--dark);
-	color: var(--light);
-	font-size: 18px;
-}
-
-.navMenuContainer {
-	list-style-type: none;
+  margin: 0;
   display: flex;
-  align-items: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.navMenuContainer > li {
-	margin: 0 20px 0 0;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.navMenuContainer > li > a {
-	text-decoration: none;
-	color: var(--light);
-	padding: 19px 5px;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.navMenuContainer > li > a:hover {
-	color: var(--red);
-}
-
-.navMenuRES {
-	display: none;
-}
-/* AKhir Navbar */
-
-/* Responsive */
-@media (max-width: 768px) {
-	.home,
-	.movies,
-	.about,
-	.donate {
-		padding: 10px 15px !important;
-	}
-
-	.navBar {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		align-content: center;
-		padding: 0 25px !important;
-	}
-
-	.navMenuContainer {
-		display: none;
-	}
-
-	.navLabel {
-		display: none;
-	}
-
-	.navMenuRES {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-	}
-
-	.navMenuRES > a {
-		color: var(--light);
-		font-size: 20px;
-		text-decoration: none;
-		padding: 16px 6px;
-	}
-
-	.homeImg {
-		width: 330px !important;
-	}
-
-	.moviesContainer {
-		justify-content: space-evenly !important;
-	}
-
-	.moviesContainer > .moviesCard {
-		width: 120px !important;
-		margin: 0 10px 10px 10px !important;
-	}
-
-	.moviesContainer > .moviesCard > .moviesImg {
-		height: 177.8px !important;
-		width: 120px !important;
-	}
-
-	footer {
-		padding: 20px 15px !important;
-		display: flex !important;
-		flex-direction: column !important;
-		justify-content: center !important;
-		align-items: center !important;
-		align-content: center !important;
-	}
-
-	footer > img {
-		width: 170px !important;
-	}
-
-	.footerContainer {
-		flex-direction: column !important;
-		justify-content: center !important;
-		align-content: center !important;
-		align-items: center !important;
-		width: 100% !important;
-	}
-
-	.footerLeft {
-		margin-bottom: 20px;
-	}
-
-	.footerRight > div:nth-child(2),
-	.footerRight > div:nth-child(3),
-	.footerRight > div:nth-child(4) {
-		flex-direction: row-reverse !important;
-		justify-content: flex-end !important;
-	}
-
-	.footerRight > div:nth-child(2) > img,
-	.footerRight > div:nth-child(3) > img,
-	.footerRight > div:nth-child(4) > img{
-		margin: 0 5px 0 0 !important;
-	}
-
-	.footerRight > div,
-	.footerRight > p {
-		justify-content: flex-start !important;
-		text-align: left !important;
-	}
-
-	.footerRight > p {
-		margin: 0 0 !important;
-		text-align: center !important;
-	}
-
-	.footerRight > hr {
-		display: block !important;
-	}
-}
-/* AKhir Responsive */
-
-/* Home */
-.headerHome {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-content: center;
-	align-content: center;
-	justify-items: center;
-	align-items: center;
-	padding: 70px 0;
-}
-
-.headerHome > img,
-.headerHome > h1,
-.headerHome > a {
-	margin: 8px 0 !important;
-}
-
-.headerHome > a {
-	padding: 7px 14px;
-	border: 2px solid var(--red);
-	background-color: var(--red);
-	color: var(--light);
-	font-size: 18px;
-	text-decoration: none;
-}
-
-.headerHome > a:hover {
-	background-color: var(--light);
-	color: var(--red);
-}
-
-.homeImg {
-	display: block;
-	width: 500px;
-}
-/* Akhir Header */
-
-/* Movies */
-.moviesContainer {
-	display: flex;
-	align-items: stretch;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding: 25px 0 0 0;
-}
-
-.moviesContainer > .moviesCard {
-	margin: 0 20px 20px 20px;
-	height: auto;
-	width: 150px;
-	/*border: 2px solid var(--red);*/
-	overflow: hidden;
-}
-
-.moviesContainer > .moviesCard > .moviesImg {
-	height: 222.250px;
-	width: 150px;
-	overflow: hidden;
-	cursor: pointer;
-	/*border-radius: 3px;*/
-}
-
-.moviesContainer > .moviesCard > .moviesImg > img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	transition: 0.2s;
-}
-
-.moviesContainer > .moviesCard > .moviesImg:hover > img {
-	transform: scale(1.2);
-}
-
-.moviesContainer > .moviesCard > p {
-	margin: 5px 0;
-	font-weight: bold;
-}
-
-.moviesContainer > .moviesCard > .moviesLabel {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	margin: 0 0 !important;
-	padding: 5px 0 0 0;
-}
-
-.moviesContainer > .moviesCard > .moviesLabel > label {
-	padding: 3px 10px;
-	font-size: 13px;
-	font-weight: bold;
-	color: var(--light);
-	background-color: var(--red);
-	/*border-radius: 3px;*/
-	margin-right: 5px;
-}
-
-.moviesContainer > .moviesCard > .moviesLabel > a {
-	padding: 3px 10px;
-	font-size: 10px;
-	font-weight: bold;
-	color: var(--light);
-	background-color: var(--red);
-	/*border-radius: 3px;*/
-}
-/* Akhir Movies */
-
-/* Footer */
-footer {
-	background-color: var(--dark);
-	color: var(--hover-light);
-	padding: 30px 45px;
-	font-weight: 400;
-}
-
-footer > img {
-	width: 200px;
-}
-
-footer > .footerContainer {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	align-content: flex-start;
-	width: 100%;
-}
-
-footer > .footerContainer > .footerLeft,
-footer > .footerContainer > .footerRight {
-	width: 330px;
-}
-
-footer > .footerContainer > .footerRight {
-	text-align: right;
-}
-
-footer > .footerContainer > .footerRight > div {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: stretch;
-	align-content: center;
-	margin: 0 0 5px 0;
-}
-
-.footerRight > div > p {
-	margin: 0 0;
-}
-
-.footerRight > p {
-	margin: 0 0 5px 0;
-	color: var(--hover-light);
-}
-
-.footerRight > div > img,
-.footerSocialInfo > a {
-	margin-left: 5px;
-}
-
-.footerSocialInfo > a {
-	height: 22px;
-}
-
-.footerRight > hr {
-  margin: 1rem 0;
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-  z-index: 0;
-  display: none;
-}
-
-.footerRight > hr:not([size]) {
-  height: 1px;
-}
-/* Akhir Footer */
-
-/* News */
-.light {
-	font-weight: bold;
-	padding: 6px 12px;
-	border: 2px solid var(--red);
-}
-
-.light-on{
-	background: var(--red);
-	color: var(--light);
-}
-
-.light-off {
-	background: var(--light);
-	color: var(--red);
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
