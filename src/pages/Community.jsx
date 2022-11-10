@@ -1,9 +1,9 @@
 import React from "react";
 
-function News() {
+function Community() {
   return (
     <div>
-      <h2>News</h2>
+      <h2>Community</h2>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
         facere facilis eius repellendus unde, iusto tempora. Minus officiis
@@ -140,4 +140,4 @@ function News() {
   );
 }
 
-export default News;
+export default Community;
