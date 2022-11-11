@@ -12,3 +12,8 @@
     @apply my-0.5;
   }
 }
+
+*::selection {
+  background-color: #EF4444;
+  color: #F4F4F5;
+}

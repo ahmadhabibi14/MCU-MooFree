@@ -16,7 +16,9 @@ function MoviesCard(props) {
         <p className="text-sm">{props.title}</p>
       </div>
       <div className="flex flex-row space-x-2 mt-2">
-        <span className="text-xs py-0.5 px-2 rounded-full border border-red-500 text-red-500 cursor-pointer"
+        <span className="text-xs py-0.5 px-2 rounded-full border border-zinc-400
+             dark:border-zinc-700 hover:border-red-500
+              cursor-pointer"
               title={`Release ${props.year}`}
           >
           {props.year}
