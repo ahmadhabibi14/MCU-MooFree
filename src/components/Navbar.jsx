@@ -22,8 +22,8 @@ function Navbar() {
   return (
     <nav
       className="w-full h-16 border-b border-zinc-300 dark:border-zinc-700 flex justify-center
-      dark:bg-zinc-900 dark:bg-opacity-70
-      fixed bg-zinc-100 top-0 bg-opacity-60 backdrop-blur"
+      dark:bg-zinc-900 dark:bg-opacity-75
+      fixed bg-zinc-100 top-0 bg-opacity-75 backdrop-blur z-50"
     >
       <div className="flex flex-row justify-between items-center md:w-11/12">
         <div className="flex flex-row space-x-6 items-center">
@@ -44,7 +44,13 @@ function Navbar() {
           </Link>
           <span className="w-px bg-zinc-300 dark:bg-zinc-600 h-6"></span>
           <div className="flex flex-row space-x-6 items-center">
-            <NavLink exact="true" to="/" className="hover:text-red-500">
+            <NavLink exact="true" to="/"
+              className={
+                isActive
+                ? "text-red-500"
+                : "text-zinc-800 hover:text-red-500"
+              }
+            >
               Home
             </NavLink>
             <NavLink to="/about" className="hover:text-red-500">
@@ -71,7 +77,7 @@ function Navbar() {
           </div>
         </div>
         <div className="flex flex-row space-x-3 text-sm items-center">
-          <button className="flex flex-row space-x-2 mr-2 border dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800 bg-zinc-200 py-1.5 px-2 rounded-full
+          <button className="flex flex-row space-x-2 border dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-800 bg-zinc-200 py-1.5 px-2 rounded-full
             ">
             <svg
               className="stroke-zinc-400 dark:stroke-zinc-400"

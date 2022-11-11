@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins/Regular.ttf");
+}
+
+@layer base {
+  br {
+    @apply my-0.5;
+  }
 }
