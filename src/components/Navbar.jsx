@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   const [theme, setTheme] = useState("dark");
+
   if (theme === "dark") {
     localStorage.theme = "dark";
   } else {
@@ -18,6 +19,10 @@ function Navbar() {
   } else {
     document.documentElement.classList.remove("dark");
   }
+
+  // useEffect(() => {
+  //   // DO Something
+  // }, []);
 
   return (
     <nav
