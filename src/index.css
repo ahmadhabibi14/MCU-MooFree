@@ -13,6 +13,10 @@
   }
 }
 
+.navbar-active {
+  @apply pb-[4px] pt-[5px] after:text-red-500 after:block after:my-0 after:mx-auto after:border-b after:border-red-500 text-red-500;
+}
+
 *::selection {
   background-color: #EF4444;
   color: #F4F4F5;

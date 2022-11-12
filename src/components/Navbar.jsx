@@ -47,30 +47,70 @@ function Navbar() {
           </Link>
           <span className="w-px bg-zinc-300 dark:bg-zinc-600 h-6"></span>
           <div className="flex flex-row space-x-6 items-center">
-            <NavLink exact="true" to="/" className="hover:text-red-500">
+            <NavLink
+              exact="true"
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 py-[8px] navbar-active"
+                  : "hover:text-red-500 py-[8px] "
+              }
+            >
               Home
             </NavLink>
-            <NavLink to="/about" className="hover:text-red-500">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 py-[8px] navbar-active"
+                  : "hover:text-red-500 py-[8px] "
+              }
+            >
               About
             </NavLink>
-            <NavLink to="/movies" className="hover:text-red-500">
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 py-[8px] navbar-active"
+                  : "hover:text-red-500 py-[8px] "
+              }
+            >
               Movies
             </NavLink>
-            <NavLink to="/comics" className="hover:text-red-500">
+            <NavLink
+              to="/comics"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 py-[8px] navbar-active"
+                  : "hover:text-red-500 py-[8px] "
+              }
+            >
               Comics
             </NavLink>
-            <NavLink to="/news" className="hover:text-red-500">
+            <NavLink
+              to="/news"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 py-[8px] navbar-active"
+                  : "hover:text-red-500 py-[8px] "
+              }
+            >
               News
             </NavLink>
             <NavLink
               to="/community"
-              className="flex flex-row space-x-2 items-center"
+              className={({ isActive }) =>
+                isActive
+                  ? "hover:text-red-500 navbar-active"
+                  : "hover:text-red-500"
+              }
             >
-              <span className="hover:text-red-500">Community</span>
-              <span className="py-0.5 px-2 text-xs rounded-full bg-red-400/10 text-red-500 bg-opacity-40">
-                New
-              </span>
+              Community
             </NavLink>
+            <span className="!ml-[8px] py-0.5 px-2 text-xs rounded-full bg-red-400/10 text-red-500 bg-opacity-40">
+              New
+            </span>
           </div>
         </div>
         <div className="flex flex-row space-x-3 text-sm items-center">
