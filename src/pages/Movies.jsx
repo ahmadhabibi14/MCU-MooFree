@@ -20,28 +20,70 @@ function Movies() {
           grid grid-cols-5 gap-6 justify-items-center"
         >
           <MoviesCard
+            title="Avengers: Secret Wars"
+            img="/img/MoviesImage/40.jpg"
+            year="2026"
+            path="/news"
+          />
+
+          <MoviesCard
+            title="Avengers: The Kang Dynasty"
+            img="/img/MoviesImage/39.jpg"
+            year="2025"
+            path="/news"
+          />
+
+          <MoviesCard
             title="Fantastic Four"
+            img="/img/MoviesImage/38.jpg"
+            year="2025"
+            path="/news"
+          />
+
+          <MoviesCard
+            title="Untitled Deadpool Movie"
+            img="/img/MoviesImage/37.jpg"
+            year="2024"
+            path="/news"
+          />
+
+          <MoviesCard
+            title="Blade"
+            img="/img/MoviesImage/36.jpg"
+            year="2024"
+            path="/news"
+          />
+
+          <MoviesCard
+            title="Thunderbolts"
+            img="/img/MoviesImage/35.jpg"
+            year="2024"
+            path="/news"
+          />
+
+          <MoviesCard
+            title="Captain America: New World Order"
             img="/img/MoviesImage/34.jpg"
             year="2024"
             path="/news"
           />
 
           <MoviesCard
-            title="Ant-Man and The Wasp: Quantumania"
+            title="The Marvels"
             img="/img/MoviesImage/33.jpg"
             year="2023"
             path="/news"
           />
 
           <MoviesCard
-            title="Blade"
+            title="Guardians of the Galaxy Volume 3"
             img="/img/MoviesImage/32.jpg"
             year="2023"
             path="/news"
           />
 
           <MoviesCard
-            title="The Marvels"
+            title="Ant-Man and The Wasp: Quantumania"
             img="/img/MoviesImage/31.jpg"
             year="2023"
             path="/news"
