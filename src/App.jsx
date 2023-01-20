@@ -7,6 +7,8 @@ import News from "./pages/News.jsx";
 import Community from "./pages/Community.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+// Movies Here
+import IronMan from "./pages/movies/Iron-Man.jsx";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/news" element={<News/>} />
           <Route path="/community" element={<Community/>} />
+          <Route path="/movie/iron-man" element={<IronMan/>} />
         </Routes>
       </main>
 

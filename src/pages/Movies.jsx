@@ -270,7 +270,7 @@ function Movies() {
             title="Iron Man"
             img="/img/MoviesImage/01.jpg"
             year="2008"
-            path="/news"
+            path="/movie/iron-man"
           />
         </div>
       </div>
