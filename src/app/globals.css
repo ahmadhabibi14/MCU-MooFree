@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+   font-family: "Poppins";
+   src: url("/fonts/Poppins/Regular.ttf");
+}
+
+*::selection {
+   background-color: #EF4444;
+   color: #F4F4F5;
+}
+
+@layer base {
+   br {
+     @apply my-0.5;
+   }
+}
+
+/* NAVBAR */
+.navbar {
+   @apply w-full h-16 border-b border-zinc-300 dark:border-zinc-700 flex justify-center dark:bg-zinc-950 dark:bg-opacity-75 fixed bg-zinc-100 top-0 bg-opacity-75 backdrop-blur z-50;
+}
+.navbar-active {
+   @apply pb-[4px] pt-[5px] after:text-red-500 after:block after:my-0 after:mx-auto after:border-b after:border-red-500 text-red-500;
+}
