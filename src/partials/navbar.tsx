@@ -1,27 +1,13 @@
 "use client"
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { navbar_items } from "@/data/navbar/navbar_items"
 import messageForHackers from "@/utils/messageForHackers"
+import ThemeToggle from "@/components/theme_toggle"
 
 export default function NavBar() {
-   let [theme, setTheme] = useState("dark");
-   if (theme === "dark") {
-      localStorage.setItem("theme", "dark")
-      document.documentElement.classList.add("dark");
-   } else {
-      localStorage.setItem("theme", "light")
-      document.documentElement.classList.remove("dark");
-   }
-
    useEffect(() => {
       messageForHackers();
-      localStorage.getItem("theme")
-      if (localStorage.theme == "dark") {
-         document.documentElement.classList.add("dark");
-      } else {
-         document.documentElement.classList.remove("dark");
-      }
    }, []);
 
    return (
@@ -46,7 +32,7 @@ export default function NavBar() {
                   </label>
                </Link>
                <span className="hidden xl:block w-px bg-zinc-300 dark:bg-zinc-600 h-6"></span>
-               <div className="hidden xl:flex flex-row space-x-6 items-center">
+               <nav className="hidden xl:flex flex-row space-x-6 items-center">
                   {navbar_items.map((item, idx) => (
                      <Link
                         key={idx}
@@ -55,7 +41,7 @@ export default function NavBar() {
                         {item.label}
                      </Link>
                   ))}
-               </div>
+               </nav>
             </div>
             <div className="flex flex-row space-x-3 text-sm items-center">
                <button className="flex flex-row space-x-2 border dark:border-zinc-700 border-zinc-300 bg-zinc-200 dark:bg-zinc-900 py-1.5 px-2 rounded-full">
@@ -71,31 +57,7 @@ export default function NavBar() {
                      className="dark:bg-zinc-900 bg-zinc-200 outline-none ring-0"
                   />
                </button>
-               <button
-                  onClick={() => {
-                     setTheme(theme === "dark" ? "light" : "dark");
-                  }}
-                  className="py-1.5 pl-2 pr-2.5 rounded-full border group
-                     border-zinc-400 dark:border-zinc-700 hover:border-red-500 dark:hover:border-red-500 hover:text-red-500
-                     text-zinc-700 dark:text-zinc-300 dark:hover:text-red-500 flex flex-row items-center"
-                  >
-                  <svg className="block dark:hidden mr-1.5 fill-none" width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                     <circle cx="12" cy="12" r="5" className="group-hover:fill-red-500"/>
-                     <line x1="12" y1="1" x2="12" y2="3" />
-                     <line x1="12" y1="21" x2="12" y2="23" />
-                     <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                     <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                     <line x1="1" y1="12" x2="3" y2="12" />
-                     <line x1="21" y1="12" x2="23" y2="12" />
-                     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                  </svg>
-                  <svg className="hidden dark:block mr-1.5 fill-none group-hover:fill-red-500" width="19" height="19" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                  </svg>
-                  <span className="block dark:hidden">Light</span>
-                  <span className="hidden dark:block">Dark</span>
-               </button>
+               <ThemeToggle />
                <button className="px-3 py-1.5 border border-red-400 rounded-full bg-red-500 text-zinc-100 hover:bg-red-400">
                   Subscribe
                </button>

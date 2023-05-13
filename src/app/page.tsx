@@ -1,9 +1,8 @@
 export const metadata = {
-  title: 'MCU - MovFree',
-  description: 'Your Marvel movies',
+  title: "MCU - MovFree",
   openGraph: {
-    title: 'MovFree',
-    images: '/next.svg',
+    title: "MovFree",
+    images: "/next.svg",
   },
 }
 

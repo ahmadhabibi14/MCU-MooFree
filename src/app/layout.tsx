@@ -1,6 +1,36 @@
 import "./globals.css"
 import NavBar from "@/partials/navbar"
 import Footer from "@/partials/footer"
+import { Metadata } from "next";
+
+const currentTime: string = new Date().toISOString();
+
+export const metadata: Metadata = {
+   description: "Your Marvel movies",
+   generator: "Next.js",
+   applicationName: "MCU - MovFree",
+   referrer: "origin-when-cross-origin",
+   keywords: ["Next.js", "React", "Marvel", "Marvel Cinematic Universe"],
+   authors: [{ name: "Ahmad Habibi", url: "https://habibi2004.pages.dev" }],
+   creator: "Ahmad Habibi",
+   publisher: "Ahmad Habibi",
+   formatDetection: {
+     email: false,
+     address: false,
+     telephone: false,
+   },
+   openGraph: {
+      url: "/",
+      publishedTime: currentTime,
+   },
+   icons: {
+      icon: "/favicons/favicon.ico",
+   },
+   themeColor: [
+      { media: '(prefers-color-scheme: light)', color: 'cyan' },
+      { media: '(prefers-color-scheme: dark)', color: 'black' },
+   ],
+ };
 
 export default function RootLayout({
    children,
@@ -9,9 +39,6 @@ export default function RootLayout({
 }) {
    return (
       <html lang="en">
-         <head>
-            <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon" />
-         </head>
          <body className="font-poppins text-zinc-800 dark:text-zinc-200">
             <NavBar />
             <main className="min-h-[90vh] dark:bg-zinc-900 dark:text-zinc-200 pt-24 px-14 pb-10">
