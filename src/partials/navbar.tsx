@@ -1,7 +1,8 @@
 "use client"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { navbar_items } from "@/data/navbar/navbar_items";
+import { navbar_items } from "@/data/navbar/navbar_items"
+import messageForHackers from "@/utils/messageForHackers"
 
 export default function NavBar() {
    let [theme, setTheme] = useState("dark");
@@ -14,6 +15,7 @@ export default function NavBar() {
    }
 
    useEffect(() => {
+      messageForHackers();
       localStorage.getItem("theme")
       if (localStorage.theme == "dark") {
          document.documentElement.classList.add("dark");
