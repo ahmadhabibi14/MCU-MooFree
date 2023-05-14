@@ -1,30 +1,11 @@
 "use client"
-import { useState, useEffect } from "react"
+import useDarkMode from "@/hooks/useDarkMode";
 
 export default function ThemeToggle() {
-   let [theme, setTheme] = useState("dark");
-   if (typeof window !== "undefined") {
-      if (theme === "dark") {
-         localStorage.setItem("theme", "dark")
-         document.documentElement.classList.add("dark");
-      } else {
-         localStorage.setItem("theme", "light")
-         document.documentElement.classList.remove("dark");
-      }
-   }
-
-   useEffect(() => {
-      localStorage.getItem("theme")
-      if (localStorage.theme == "dark") {
-         document.documentElement.classList.add("dark");
-      } else {
-         document.documentElement.classList.remove("dark");
-      }
-   }, []);
-
+   const [colorTheme, setTheme] = useDarkMode();
    return (
-      <button onClick={() => { setTheme(theme === "dark" ? "light" : "dark"); }}
-         className="py-1.5 pl-2 pr-2.5 rounded-full border group
+      <button onClick={() => { setTheme(colorTheme === "dark" ? "light" : "dark"); }}
+         className="py-1.5 pl-2 pr-2.5 rounded-full border group outline-none right-0
             border-zinc-400 dark:border-zinc-700 hover:border-red-500 dark:hover:border-red-500 hover:text-red-500
             text-zinc-700 dark:text-zinc-300 dark:hover:text-red-500 flex flex-row items-center"
       >
