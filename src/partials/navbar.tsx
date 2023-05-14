@@ -4,8 +4,11 @@ import { useEffect } from "react"
 import { navbar_items } from "@/data/navbar/navbar_items"
 import messageForHackers from "@/utils/messageForHackers"
 import ThemeToggle from "@/components/theme_toggle"
+import { useRouter } from "next/router"
 
 export default function NavBar() {
+   const router = useRouter()
+   const currentRoute = router.pathname
    useEffect(() => {
       messageForHackers();
    }, []);
@@ -37,7 +40,10 @@ export default function NavBar() {
                      <Link
                         key={idx}
                         href={item.path}
-                        className="hover:text-red-500 py-[8px]">
+                        className={currentRoute === item.path
+                           ? "hover:text-red-500 py-[8px] navbar-active"
+                           : "hover:text-red-500 py-[8px]"
+                        }>
                         {item.label}
                      </Link>
                   ))}
