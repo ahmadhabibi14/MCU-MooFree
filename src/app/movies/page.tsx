@@ -11,12 +11,12 @@ export const metadata = {
    },
  }
 
-export default function About() {
+export default function Movies() {
    return (
       <div className="h-full w-full">
          <div className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
             {movie_items.map((item, idx) => (
-               <Link href={item.path} key={idx} className="z-20 cursor-pointer transition-all duration-100 ease-linear hover:scale-105 group flex flex-col space-y-2 justify-between w-44 border rounded-md p-3 shadow-lg dark:bg-zinc-950 bg-zinc-200 dark:border-zinc-700 border-zinc-300">
+               <Link href={item.path} key={idx} title={item.title} className="z-20 cursor-pointer transition-all duration-100 ease-linear hover:scale-105 group flex flex-col space-y-2 justify-between w-44 border rounded-md p-3 shadow-lg dark:bg-zinc-950 bg-zinc-200 dark:border-zinc-700 border-zinc-300">
                   <div className="w-full h-auto rounded-md overflow-hidden dark:border-zinc-700 border-zinc-300">
                      <Image
                         src={item.img}
