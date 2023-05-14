@@ -7,7 +7,7 @@ export default function Footer() {
       <footer className="px-6 md:px-20 pt-12 dark:bg-zinc-950 bg-zinc-200 w-full">
          <section className="flex flex-col md:flex-row justify-start md:space-x-20 mb-10 dark:text-gray-300 text-zinc-700">
             <figure className="w-full md:basis-[30%] text-base flex flex-col space-y-3">
-               <svg viewBox="0 0 246.5 55.23" className="cursor-pointer w-[150px] h-auto hover:drop-shadow-[0_0_0.3rem_#ffffff70]">
+               <svg viewBox="0 0 246.5 55.23" className="cursor-pointer w-[150px] h-auto">
                   <path className="dark:fill-white fill-black" d="M518.28,486.45h117v-2.05h-117Z" transform="translate(-388.75 -484.39)"/>
                   <path className="dark:fill-white fill-black" d="M518.28,539.59h117v-2.05h-117Z" transform="translate(-388.75 -484.39)"/>
                   <path className="dark:fill-white fill-black" d="M534.52,519.17v5.89c0,5-2.48,7.51-7.51,7.51h-1.27c-5,0-7.39-2.48-7.39-7.39v-5.63h4.5v5.8c0,2.08,1,3.06,3.06,3.06h.92c2.08,0,3.06-1,3.06-3.06v-6.06a4.13,4.13,0,0,0-2-3.87l-5.66-4.1a8,8,0,0,1-3.87-7.51V499c0-5,2.48-7.51,7.51-7.51H527c5,0,7.39,2.48,7.39,7.39v3.46h-4.5v-3.64c0-2.08-1-3.06-3.06-3.06H526c-2.08,0-3.06,1-3.06,3.06v5.08a4.17,4.17,0,0,0,2.08,3.87l5.6,4c2.94,2.14,3.87,4,3.87,7.51" transform="translate(-388.75 -484.39)"/>
@@ -24,7 +24,7 @@ export default function Footer() {
                   <path fill="#ffff" d="M507.37,532.2H493.93V491.79h7.24v33.14h6.2Z" transform="translate(-388.75 -484.39)"/>
                </svg>
                <figcaption>
-                  All about Marvel stuff you find, download, streaming and latest info for free only in <a href="/" className="italic text-red-500 underline">MovFree</a>
+                  All about Marvel stuff you that can find, download, streaming, and get the latest info for free only in <a href="/" className="italic text-red-500 underline">MovFree</a>
                </figcaption>
             </figure>
 
@@ -75,7 +75,7 @@ export default function Footer() {
          </section>
          <div className="flex flex-col justify-center items-center py-3 border-t border-gray-700">
             <div className="flex flex-row space-x-3 text-sm">
-               <p className="italic">Copyright &copy; 2021 - {year}</p><p>|</p><p  className="italic"><a href="/" className="text-red-600 hover:underline">MovFree.Inc</a>, All right reserved. Powered by Vercel and Next.JS</p>
+               <p className="italic">Copyright &copy; 2021 - {year}</p><p>|</p><p  className="italic"><a href="/" className="text-red-500 hover:underline">MovFree.Inc</a>, All right reserved. Powered by Vercel and Next.JS</p>
             </div>
          </div>
       </footer>
