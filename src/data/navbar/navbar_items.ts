@@ -4,7 +4,7 @@ export const navbar_items: NavbarItems[] = [
    { label: "Home", path: "/" },
    { label: "About", path: "/about" },
    { label: "Movies", path: "/movies" },
-   { label: "Comics", path: "/" },
-   { label: "News", path: "/" },
-   { label: "Community", path: "/" },
+   { label: "Comics", path: "/comics" },
+   { label: "News", path: "/news" },
+   { label: "Community", path: "/community" },
 ]

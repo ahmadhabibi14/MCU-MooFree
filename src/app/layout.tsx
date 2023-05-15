@@ -41,7 +41,7 @@ export default function RootLayout({
       <html lang="en">
          <body className="font-poppins text-zinc-800 dark:text-zinc-200">
             <NavBar />
-            <main className="min-h-[90vh] dark:bg-zinc-900 dark:text-zinc-200 pt-24 px-14 pb-10">
+            <main className="min-h-[90vh] dark:bg-zinc-900 dark:text-zinc-200 pb-10">
                {children}
             </main>
             <Footer />

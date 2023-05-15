@@ -1,6 +1,8 @@
 import { movie_items } from "@/data/movies/movies_list"
 import Link from "next/link"
 import Image from "next/image"
+import { Suspense } from "react"
+import Loading from "@/components/loading"
 
 export const metadata = {
    title: 'Movies',
@@ -13,16 +15,17 @@ export const metadata = {
 
 export default function Movies() {
    return (
-      <div className="h-full w-full">
+      <div className="h-full w-full pt-24 px-14 ">
          <div className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+         <Suspense fallback={<Loading />}>
             {movie_items.map((item, idx) => (
-               <Link href={item.path} key={idx} title={item.title} className="z-20 cursor-pointer transition-all duration-200 ease-linear hover:scale-105 group flex flex-col space-y-2 justify-between w-44 border rounded-md p-3 shadow-lg dark:bg-zinc-950 bg-zinc-200 dark:border-zinc-700 border-zinc-300">
+               <Link href={`/movies/${item.path}`} key={idx} title={item.title} className="z-20 cursor-pointer transition-all duration-200 ease-linear hover:scale-105 group flex flex-col space-y-2 justify-between w-44 border rounded-md p-3 shadow-lg dark:bg-zinc-950 bg-zinc-200 dark:border-zinc-700 border-zinc-300">
                   <div className="w-full h-auto rounded-md overflow-hidden dark:border-zinc-700 border-zinc-300">
                      <Image
                         src={item.img}
                         alt={item.title}
-                        width={100}
-                        height={100}
+                        width={382}
+                        height={566}
                         className="h-full w-full object-cover rounded-md hover:scale-125 duration-300 z-10"
                      />
                   </div>
@@ -32,6 +35,7 @@ export default function Movies() {
                   </p>
                </Link>
             ))}
+         </Suspense>
          </div>
       </div>
    )
