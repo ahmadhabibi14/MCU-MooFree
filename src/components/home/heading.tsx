@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function HomeHeading() {
    return(
-      <header className="text-zinc-800 dark:text-zinc-200">
+      <header className="text-zinc-200">
          <Image
             src="/img/Background/hero.png"
             width={2915}
