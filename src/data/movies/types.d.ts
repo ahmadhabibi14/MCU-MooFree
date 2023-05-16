@@ -4,3 +4,8 @@ export interface MoviesItemLists {
    img: string;
    release_year: string;
 }
+
+export interface MovieParams {
+   id: string;
+   param: string;
+}

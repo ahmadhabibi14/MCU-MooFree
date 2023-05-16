@@ -1,4 +1,4 @@
-import { MoviesItemLists } from "./movies_list.d"
+import { MoviesItemLists } from "./types.d"
 
 export const movie_items: MoviesItemLists[] = [
    { path: "/040", title: "Avengers: Secret Wars", img: "/img/MoviesImage/40.jpg", release_year: "2026" },

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { fetchMovieData } from "@/api/fetch_movie_data"
 
-export default function movie_001() {
+export default function Movies_001() {
 	const [data, setData] = useState<any>(null);
 	useEffect(() => {
 		const responseData = fetchMovieData("505642");

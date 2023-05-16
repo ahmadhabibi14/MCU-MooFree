@@ -8,3 +8,6 @@ ddd659323326f11b9570281365551ef0
 curl -X GET \
    > --url https://api.themoviedb.org/3/movie/505642\?api_key\=ddd659323326f11b9570281365551ef0 \
    > --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZGQ2NTkzMjMzMjZmMTFiOTU3MDI4MTM2NTU1MWVmMCIsInN1YiI6IjYzYzUxZDQwOTg4YWZkMDA4YTMwZDliYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.s-TH0FBGNWIUA_oBNH3vJhosTnOkkc3Xg5WFnywOfzg'
+
+
+https://api.themoviedb.org/3/movie/505642?api_key=ddd659323326f11b9570281365551ef0
