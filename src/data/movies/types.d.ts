@@ -8,4 +8,5 @@ export interface MoviesItemLists {
 export interface MovieParams {
    id: string;
    param: string;
+   poster: string;
 }
