@@ -12,7 +12,7 @@ export async function fetchMovieData(movie_id: string) {
 	
 	const response = await fetch(url, options);
 	if (!response.ok) {
-		throw new Error('Request failed with status ' + response.status);
+		throw new Error("Request failed");
 	}
 	const data = await response.json();
 	return data;
