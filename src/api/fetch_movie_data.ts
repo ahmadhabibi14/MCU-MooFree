@@ -9,16 +9,11 @@ export async function fetchMovieData(movie_id: string) {
             Authorization: `Bearer ${access_token}`,
 		}
 	}
-	try {
-		const response = await fetch(url, options);
-		if (!response.ok) {
-			throw new Error('Request failed with status ' + response.status);
-		}
-		const data = await response.json();
-		console.log(data);
-		return data;
-	} catch (error) {
-		console.error('Error: ', error);
-		throw error;
+	
+	const response = await fetch(url, options);
+	if (!response.ok) {
+		throw new Error('Request failed with status ' + response.status);
 	}
+	const data = await response.json();
+	return data;
 }

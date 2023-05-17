@@ -19,7 +19,7 @@ export default function Movies() {
             <MoviesHeading />
             <div className="relative w-11/12 mx-auto top-[-35px] inset-x-0 py-6 px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center dark:bg-zinc-800 bg-zinc-200 dark:border-zinc-700 border-zinc-300 border rounded-md shadow-xl">
                {movie_items.map((item, idx) => (
-                  <Link href={`/movies/${item.path}`} key={idx} title={item.title} className="z-20 cursor-pointer transition-all duration-200 ease-linear hover:scale-105 group flex flex-col space-y-2 w-44 p-3">
+                  <Link href={`/movie${item.path}`} key={idx} title={item.title} className="z-20 cursor-pointer transition-all duration-200 ease-linear hover:scale-105 group flex flex-col space-y-2 w-44 p-3">
                      <div className="w-full h-auto rounded-md overflow-hidden dark:border-zinc-700 border-zinc-300">
                         <Image
                            src={item.img}
