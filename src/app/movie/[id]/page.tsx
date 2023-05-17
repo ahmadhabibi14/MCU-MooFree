@@ -1,7 +1,7 @@
 import { fetchMovieData } from "@/api/fetch_movie_data";
 import { getMovieById, getMoviePoster, movieObjectMap } from "@/data/movies/movie_page_details";
 import Image from "next/image"
-const ColorThief = require('colorthief');
+const ColorThief = require("colorthief");
 
 export function generateStaticParams() {
   return Object.values(movieObjectMap).map((obj) => obj.id);
