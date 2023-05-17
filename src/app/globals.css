@@ -20,6 +20,11 @@
    }
 }
 
+.img-gradient {
+   -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+   mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
 /* NAVBAR */
 .navbar {
    @apply w-full h-16 border-b border-zinc-300 dark:border-zinc-700 flex justify-center dark:bg-zinc-950 fixed bg-zinc-200 top-0 z-50;

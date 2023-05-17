@@ -12,18 +12,20 @@ export default async function Post({ params }: { params: { id: string } }) {
   const movieData = await fetchMovieData(movieId)
   return (
     <div className="h-fit">
-      <header className="text-zinc-200">
-         <Image
-            src={`https://image.tmdb.org/t/p/original/${movieData.backdrop_path}`}
-            width={2000}
-            height={980}
-            alt="Hero"
-            className="w-full h-auto"
-         />
-         
-            <h1 className="absolute top-44 left-[100px] flex flex-col space-y-4 max-w-[450px] text-2xl font-medium">
-              {movieData.title}   
-            </h1>
+      <header className="">
+         <div className="w-full h-[400px] overflow-hidden">
+            <Image
+               src={`https://image.tmdb.org/t/p/original/${movieData.backdrop_path}`}
+               width={2000}
+               height={980}
+               alt="Hero"
+               className="object-cover w-full h-auto"
+            />
+         </div>
+         <div className="h-[460px] w-full top-0 absolute z-20 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent"></div>
+         <h1 className="font-black z-30 absolute top-44 left-[100px] flex flex-col space-y-4 max-w-[450px] text-6xl">
+          {movieData.title}   
+         </h1>
       </header>
     </div>
   );
