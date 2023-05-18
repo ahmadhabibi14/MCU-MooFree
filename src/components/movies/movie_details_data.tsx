@@ -34,20 +34,20 @@ export default function MovieDetailsData(prop: TypeBiarGayaTSawkwkwk) {
 				<div className="flex flex-col space-y-4">
 					<p>{prop.overview}</p>
 					<span className="w-full h-[1px] bg-zinc-400"></span>
-					<div class="flex flex-col space-y-3 w-full">
-    					<div class="flex flex-row gap-6">
-      					<p class="w-52 h-auto font-light text-sm dark:text-zinc-300">Revenue</p>
-      					<p class="grow text-left">USD ${prop.revenue}</p>
+					<div className="flex flex-col space-y-3 w-full">
+    					<div className="flex flex-row gap-6">
+      					<p className="w-52 h-auto font-light text-sm dark:text-zinc-300">Revenue</p>
+      					<p className="grow text-left">USD ${prop.revenue}</p>
     					</div>
 
-    					<div class="flex flex-row gap-6">
-      					<p class="w-52 h-auto font-light text-sm dark:text-zinc-300">Runtime</p>
-      					<p class="grow text-left">{prop.runtime} Minutes</p>
+    					<div className="flex flex-row gap-6">
+      					<p className="w-52 h-auto font-light text-sm dark:text-zinc-300">Runtime</p>
+      					<p className="grow text-left">{prop.runtime} Minutes</p>
     					</div>
 
-    					<div class="flex flex-row gap-6">
-      					<p class="w-52 h-auto font-light text-sm dark:text-zinc-300">Language</p>
-      					<p class="grow text-left">{prop.language} - English</p>
+    					<div className="flex flex-row gap-6">
+      					<p className="w-52 h-auto font-light text-sm dark:text-zinc-300">Language</p>
+      					<p className="grow text-left">{prop.language} - English</p>
     					</div>
     				</div>
 				</div>
