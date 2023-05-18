@@ -46,7 +46,7 @@ export default async function Post({ params }: { params: { id: string } }) {
             <div className="grow flex flex-col justify-center space-y-6 py-3">
                <h1 className="font-extrabold text-4xl">{movieData.title}</h1>
                <div className="w-fit py-1 px-4 text-sm border border-zinc-200 rounded-full flex flex-row space-x-1">
-                  {movieData.genres.map((item, idx): any => (
+                  {movieData.genres.map((item: any, idx: number) => (
                      <p key={idx} className={`${idx < movieData.length -2 ? "ngab" : "tes"}`} >
                         { (idx ? "| " : "") + item.name }
                      </p>
