@@ -56,9 +56,9 @@ export default function MovieDetailsData(prop: TypeBiarGayaTSawkwkwk) {
 			<div className="basis-5/12 h-fit bg-zinc-400 dark:bg-zinc-800 rounded-xl">
 				<iframe className="w-full rounded-xl" height="300" src={prop.trailer}
 					title="YouTube video player"
-					frameborder="0"
+					frameBorder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen>
+					allowFullScreen>
 				</iframe>
 			</div>
 		</article>
