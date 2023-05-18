@@ -5,12 +5,13 @@ interface TypeBiarGayaTSawkwkwk {
 	language: string;
 	runtime: number;
 	revenue: number;
+	trailer: string;
 }
 
 export default function MovieDetailsData(prop: TypeBiarGayaTSawkwkwk) {
 	return (
 		<article className="w-11/12 mx-auto flex flex-row gap-x-14 py-10">
-			<div className="grow flex flex-col space-y-6">
+			<div className="basis-7/12 flex flex-col space-y-6">
 				<div className="flex flex-row space-x-6">
 					<Link className="flex flex-row space-x-2 rounded-full shadow-lg text-lg py-2 px-6 bg-red-600 hover:bg-red-500 text-zinc-100"
 						href="https://habibi2004.pages.dev/" target="_blank"
@@ -52,7 +53,13 @@ export default function MovieDetailsData(prop: TypeBiarGayaTSawkwkwk) {
     				</div>
 				</div>
 			</div>
-			<div className="basis-[65%] h-[300px] bg-zinc-400 dark:bg-zinc-800 rounded-xl">
+			<div className="basis-5/12 h-fit bg-zinc-400 dark:bg-zinc-800 rounded-xl">
+				<iframe className="w-full rounded-xl" height="300" src={prop.trailer}
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
 			</div>
 		</article>
 	)

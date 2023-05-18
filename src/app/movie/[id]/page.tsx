@@ -8,10 +8,10 @@ export function generateStaticParams() {
 }
 
 export default async function Post({ params }: { params: { id: string } }) {
-  const { id } = params;
-  const movieId = getMovieById(id)
-  const imgPoster = getMoviePoster(id)
-  const movieData = await fetchMovieData(movieId)
+   const { id } = params;
+   const movieId = getMovieById(id)
+   const imgPoster = getMoviePoster(id)
+   const movieData = await fetchMovieData(movieId)
 
    const date: Date = new Date(movieData.release_date)
    const releaseDate: string = date.toLocaleDateString("en-US", {
@@ -19,7 +19,7 @@ export default async function Post({ params }: { params: { id: string } }) {
       day: "2-digit",
       year: "numeric",
    })
-  return (
+   return (
     <div className="h-fit">
       <header className="text-zinc-200 w-full">
          <div className="w-full h-[400px] overflow-hidden">
@@ -86,6 +86,7 @@ export default async function Post({ params }: { params: { id: string } }) {
          language={movieData.original_language}
          runtime={movieData.runtime}
          revenue={movieData.revenue}
+         trailer={movieObjectMap[id]?.trailer}
       />
     </div>
   );
