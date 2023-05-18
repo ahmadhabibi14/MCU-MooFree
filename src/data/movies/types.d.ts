@@ -9,4 +9,5 @@ export interface MovieParams {
    id: string;
    param: string;
    poster: string;
+   trailer: string;
 }
