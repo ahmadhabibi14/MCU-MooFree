@@ -7,6 +7,7 @@ export interface MoviesItemLists {
 
 export interface MovieParams {
    id: string;
+   title: string;
    param: string;
    poster: string;
    trailer: string;

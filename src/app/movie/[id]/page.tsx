@@ -1,43 +1,29 @@
-import { Metadata } from "next";
 import { fetchMovieData } from "@/api/fetch_movie_data";
 import { getMovieById, getMoviePoster, movieObjectMap } from "@/data/movies/movie_page_details";
 import Image from "next/image"
 import MovieDetailsData from "@/components/movies/movie_details_data"
-
-let movieId: string, imgPoster: string, movieData: any, id: string;
-
-type Props = {
-   params: {id: string};
-}
-
-export async function generateMetadata(
-   { params }: Props,
-): Promise<Metadata> {
-   // read route params
-   id = params.id;
-   movieId = getMovieById(id);
-   imgPoster = getMoviePoster(id);
-   movieData = await fetchMovieData(movieId);
-
+  
+export async function generateMetadata({ params }: { params: { id: string } }) {
+   const { id } = params;
    return {
-      title: movieData.title,
-      description: movieData.overview,
+      title: movieObjectMap[id]?.title,
+      description: "mawww",
       openGraph: {
-        title: movieData.title,
-        images: movieData.backdrop_path,
+         title: id,
+         images: '/next.svg',
       },
-    }
+   };
 }
 
 export function generateStaticParams() {
   return Object.values(movieObjectMap).map((obj) => obj.id);
 }
 
-export default async function Movie() {
-   // const { id } = params;
-   // const movieId = getMovieById(id)
-   // const imgPoster = getMoviePoster(id)
-   // const movieData = await fetchMovieData(movieId)
+export default async function Post({ params }: { params: { id: string } }) {
+   const { id } = params;
+   const movieId = getMovieById(id)
+   const imgPoster = getMoviePoster(id)
+   const movieData = await fetchMovieData(movieId)
 
    const date: Date = new Date(movieData.release_date)
    const releaseDate: string = date.toLocaleDateString("en-US", {
