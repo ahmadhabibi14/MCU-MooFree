@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { fetchMovieData } from "@/api/fetch_movie_data";
 import { getMovieById, getMoviePoster, movieObjectMap } from "@/data/movies/movie_page_details";
 import Image from "next/image"
@@ -8,19 +8,16 @@ let movieId: string, imgPoster: string, movieData: any, id: string;
 
 type Props = {
    params: {id: string};
-   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export async function generateMetadata(
-   { params, searchParams }: Props,
-   parent?: ResolvingMetadata,
+   { params }: Props,
 ): Promise<Metadata> {
    // read route params
    id = params.id;
    movieId = getMovieById(id);
    imgPoster = getMoviePoster(id);
    movieData = await fetchMovieData(movieId);
-
 
    return {
       title: movieData.title,
@@ -36,7 +33,7 @@ export function generateStaticParams() {
   return Object.values(movieObjectMap).map((obj) => obj.id);
 }
 
-export default async function Movie({ params, searchParams }: Props) {
+export default async function Movie() {
    // const { id } = params;
    // const movieId = getMovieById(id)
    // const imgPoster = getMoviePoster(id)
