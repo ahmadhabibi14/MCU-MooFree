@@ -18,6 +18,7 @@ To-do-list, what I gotta do with step by step
 - [ ] Error 500s (Internal server error)
 
 ### Components
+- [ ] Loading UI and Streaming
 - [ ] Fix Metadata, OpenGraph, etc.
 - [ ] Link to Download
 - [ ] APi News Page

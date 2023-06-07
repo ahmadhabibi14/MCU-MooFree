@@ -1,7 +1,11 @@
 import "./globals.css"
 import NavBar from "@/partials/navbar"
 import Footer from "@/partials/footer"
+import Loading from "./loading";
 import { Metadata } from "next";
+import { Suspense } from "react";
+import ErrorBoundary from "@/components/error/error-boundary";
+import Error from "./error";
 
 const currentTime: string = new Date().toISOString();
 
@@ -42,7 +46,11 @@ export default function RootLayout({
          <body className="font-poppins text-zinc-800 dark:text-zinc-200">
             <NavBar />
             <main className="min-h-[90vh] dark:bg-zinc-900 dark:text-zinc-200 pb-10 pt-[58px]">
-               {children}
+               <Suspense fallback={<Loading />}>
+                  <ErrorBoundary fallback={<Error />}>
+                     {children}
+                  </ErrorBoundary>
+               </Suspense>
             </main>
             <Footer />
          </body>
