@@ -112,3 +112,19 @@
 .navbar-active {
    @apply pb-[4px] pt-[5px] after:text-red-500 after:block after:my-0 after:mx-auto after:border-b after:border-red-500 text-red-500;
 }
+
+.main-quote::before, .main-quote::after {
+   position: absolute;
+   content: '"';
+   font-size: 60px;
+   font-style: italic;
+   color: #EF4444;
+}
+
+.main-quote::after {
+   padding-top: 15px;
+}
+.main-quote::before {
+   margin-left: -32px;
+   padding-top: 15px;
+}
