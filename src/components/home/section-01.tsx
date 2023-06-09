@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Section01() {
    return (
       <section className="mt-10 mx-12 flex flex-row space-x-12">
@@ -5,9 +7,10 @@ export default function Section01() {
             <blockquote className="main-quote text-4xl font-bold leading-[3.5rem]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, amet.</blockquote>
             <p className="text-xl mt-6 text-red-500 font-medium">Tony Stark</p>
          </div>
-         <div className="w-5/12 flex flex-col space-y-3 p-6 border border-zinc-300 dark:border-zinc-600 rounded-3xl bg-gradient-to-tr from-transparent to-zinc-200 dark:to-zinc-800/80">
-            <h2 className="text-red-500 font-semibold text-3xl pl-9">Our Services</h2>
-            <div className="flex flex-col space-y-3">
+         <div className="w-5/12 h-[305px] border border-zinc-300 dark:border-zinc-600 rounded-3xl bg-gradient-to-tr from-transparent to-zinc-200 dark:to-zinc-800/80 overflow-hidden">
+            <div className=" flex flex-col space-y-3 p-6 z-30 absolute">
+               <h2 className="text-red-500 font-semibold text-3xl pl-9">Our Services</h2>
+               <div className="flex flex-col space-y-3">
                <div className="flex flex-row space-x-4">
                   <svg className="fill-red-500 w-[20px] h-auto" viewBox="0 0 24 24">
                      <path d="M15.2605 22.25H8.74047C3.83047 22.25 1.73047 20.15 1.73047 15.24V15.11C1.73047 10.67 3.48047 8.53003 7.40047 8.16003C7.80047 8.13003 8.18047 8.43003 8.22047 8.84003C8.26047 9.25003 7.96047 9.62003 7.54047 9.66003C4.40047 9.95003 3.23047 11.43 3.23047 15.12V15.25C3.23047 19.32 4.67047 20.76 8.74047 20.76H15.2605C19.3305 20.76 20.7705 19.32 20.7705 15.25V15.12C20.7705 11.41 19.5805 9.93003 16.3805 9.66003C15.9705 9.62003 15.6605 9.26003 15.7005 8.85003C15.7405 8.44003 16.0905 8.13003 16.5105 8.17003C20.4905 8.51003 22.2705 10.66 22.2705 15.13V15.26C22.2705 20.15 20.1705 22.25 15.2605 22.25Z"/>
@@ -62,6 +65,16 @@ export default function Section01() {
                   </svg>
                   <span>And so on..</span>
                </div>
+               </div>
+            </div>
+            <div className="w-full flex justify-end h-auto overflow-hidden">
+               <Image
+                  width={500}
+                  height={500}
+                  src="/icons/bulat_hiasan.svg"
+                  alt="Bulat"
+                  className="w-[340px] h-auto object-cover -mr-24 -mt-3.5"
+               />
             </div>
          </div>
       </section>
